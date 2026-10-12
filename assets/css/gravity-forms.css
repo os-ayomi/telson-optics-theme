@@ -1,0 +1,202 @@
+/* Gravity Forms, restyled with the theme's own tokens instead of its bundled CSS
+   (disabled via gform_disable_css in inc/gravity-forms.php). Selectors target
+   Gravity Forms' own markup, since a dropped-in shortcode has no theme classes.
+   Custom properties are inherited from whichever context the form sits in
+   (light page or a dark section/footer), so no light/dark duplication is needed. */
+
+.gform_wrapper.gravity-theme {
+	margin: 0;
+	font-family: var(--font-body);
+}
+
+.gform_wrapper.gravity-theme form {
+	margin: 0;
+}
+
+.gform_heading {
+	margin-bottom: var(--spacing-md);
+}
+
+.gform_title {
+	margin: 0 0 0.35rem;
+	font-family: var(--font-heading);
+	text-transform: uppercase;
+	color: var(--color-heading);
+}
+
+.gform_description {
+	color: var(--color-text-muted);
+}
+
+.gform_wrapper.gravity-theme .gform_fields {
+	display: grid;
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+	gap: 0 var(--spacing-sm);
+}
+
+.gform_wrapper.gravity-theme .gfield {
+	grid-column: span 12;
+	margin: 0 0 var(--spacing-sm);
+}
+
+.gform_wrapper.gravity-theme .gfield--width-half {
+	grid-column: span 6;
+}
+
+.gform_wrapper.gravity-theme .gfield--width-third {
+	grid-column: span 4;
+}
+
+@media (max-width: 600px) {
+	.gform_wrapper.gravity-theme .gfield--width-half,
+	.gform_wrapper.gravity-theme .gfield--width-third {
+		grid-column: span 12;
+	}
+}
+
+.gform_wrapper.gravity-theme .gfield_label,
+.gform_wrapper.gravity-theme legend.gfield_label {
+	display: block;
+	margin-bottom: 0.25rem;
+	font-size: var(--fs-small);
+	font-weight: 400;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--color-text-muted);
+}
+
+.gform_wrapper.gravity-theme .gfield_required {
+	color: var(--color-primary);
+}
+
+.gform_wrapper.gravity-theme .gfield_description,
+.gform_wrapper.gravity-theme .instruction {
+	margin-top: 0.25rem;
+	font-size: var(--fs-small);
+	color: var(--color-text-muted);
+}
+
+.gform_wrapper.gravity-theme input[type="text"],
+.gform_wrapper.gravity-theme input[type="email"],
+.gform_wrapper.gravity-theme input[type="tel"],
+.gform_wrapper.gravity-theme input[type="url"],
+.gform_wrapper.gravity-theme input[type="number"],
+.gform_wrapper.gravity-theme input[type="password"],
+.gform_wrapper.gravity-theme textarea,
+.gform_wrapper.gravity-theme select {
+	width: 100%;
+	min-height: 2.75rem;
+	padding: 0.6rem 0.9rem;
+	border: 1px solid rgba(34, 34, 34, 0.45);
+	border-radius: var(--radius);
+	background: var(--color-field-bg);
+	color: var(--color-field-text);
+	font: inherit;
+}
+
+.gform_wrapper.gravity-theme textarea {
+	min-height: 8rem;
+}
+
+.gform_wrapper.gravity-theme input:focus,
+.gform_wrapper.gravity-theme textarea:focus,
+.gform_wrapper.gravity-theme select:focus {
+	border-color: var(--color-primary);
+	outline: none;
+	box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.gform_wrapper.gravity-theme .ginput_container_checkbox li,
+.gform_wrapper.gravity-theme .ginput_container_radio li {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 0.35rem;
+	list-style: none;
+}
+
+.gform_wrapper.gravity-theme input[type="checkbox"],
+.gform_wrapper.gravity-theme input[type="radio"] {
+	accent-color: var(--color-primary);
+}
+
+.gform_wrapper.gravity-theme .ginput_container_fileupload .gform_drop_area {
+	padding: var(--spacing-md);
+	border: 1px dashed rgba(34, 34, 34, 0.45);
+	text-align: center;
+	color: var(--color-text-muted);
+}
+
+.gform_wrapper.gravity-theme .gfield_consent_label {
+	font-size: var(--fs-small);
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+.gform_footer,
+.gform_page_footer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--spacing-sm);
+	margin: var(--spacing-sm) 0 0;
+	padding: 0;
+}
+
+.gform_button,
+.gform_next_button,
+.gform_previous_button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 2.75rem;
+	padding: 0.65rem 1.75rem;
+	border: 1px solid #666666;
+	border-radius: var(--radius);
+	background: var(--color-dark);
+	color: var(--color-secondary);
+	font-family: var(--font-heading);
+	font-size: var(--fs-small);
+	font-weight: 700;
+	letter-spacing: var(--tracking-button);
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.gform_button:hover,
+.gform_next_button:hover,
+.gform_previous_button:hover {
+	border-color: var(--color-primary);
+	background: var(--color-accent);
+	color: var(--color-light);
+}
+
+.gform_wrapper.gravity-theme .gfield_validation_message,
+.gform_wrapper.gravity-theme .validation_message {
+	margin-top: 0.25rem;
+	font-size: var(--fs-small);
+	color: var(--color-danger, #e0796b);
+}
+
+.gform_wrapper.gravity-theme .validation_error {
+	margin-bottom: var(--spacing-sm);
+	padding: 0.75rem 1rem;
+	border-left: 3px solid var(--color-danger, #e0796b);
+	background: var(--color-surface-raised);
+	color: var(--color-text);
+}
+
+.gform_confirmation_wrapper .gform_confirmation_message {
+	padding: 0.75rem 1rem;
+	border-left: 3px solid var(--color-success, #6fa37a);
+	background: var(--color-surface-raised);
+	color: var(--color-text);
+}
+
+.gform_wrapper.gravity-theme .gform_progressbar {
+	margin-bottom: var(--spacing-md);
+}
+
+.gform_wrapper.gravity-theme .gform_progressbar_percentage {
+	background: var(--color-primary) !important;
+	color: var(--color-ink) !important;
+}

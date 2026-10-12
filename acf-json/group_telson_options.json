@@ -1,0 +1,601 @@
+{
+    "key": "group_telson_options",
+    "title": "Telson Settings",
+    "fields": [
+        {
+            "key": "field_telson_tab_brand",
+            "label": "Branding",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_telson_logo",
+            "label": "Logo",
+            "name": "logo",
+            "aria-label": "",
+            "type": "image",
+            "return_format": "array",
+            "library": "all",
+            "preview_size": "medium",
+            "instructions": "Header logo (light artwork works best on the olive header). The site icon is set under Appearance \u2192 Customize \u2192 Site Identity."
+        },
+        {
+            "key": "field_telson_footer_logo",
+            "label": "Footer / age gate logo",
+            "name": "footer_logo",
+            "aria-label": "",
+            "type": "image",
+            "return_format": "array",
+            "library": "all",
+            "preview_size": "medium",
+            "instructions": "Falls back to the header logo text if empty."
+        },
+        {
+            "key": "field_telson_tab_header",
+            "label": "Header",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_telson_announcement_enabled",
+            "label": "Show announcement bar",
+            "name": "announcement_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 0
+        },
+        {
+            "key": "field_telson_announcement_text",
+            "label": "Announcement text",
+            "name": "announcement_text",
+            "aria-label": "",
+            "type": "text",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_telson_announcement_enabled",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_telson_announcement_link",
+            "label": "Announcement link",
+            "name": "announcement_link",
+            "aria-label": "",
+            "type": "link",
+            "return_format": "array",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_telson_announcement_enabled",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_telson_tab_age",
+            "label": "Age gate",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_telson_age_gate_enabled",
+            "label": "Enable age verification",
+            "name": "age_gate_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 0
+        },
+        {
+            "key": "field_telson_age_gate_heading",
+            "label": "Heading",
+            "name": "age_gate_heading",
+            "aria-label": "",
+            "type": "text",
+            "default_value": "Age verification",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_telson_age_gate_enabled",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_telson_age_gate_message",
+            "label": "Message",
+            "name": "age_gate_message",
+            "aria-label": "",
+            "type": "textarea",
+            "rows": 3,
+            "new_lines": "",
+            "default_value": "Our products are intended for adults. By entering this website, you confirm that you are at least 18 years of age.",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_telson_age_gate_enabled",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_telson_age_gate_confirm_label",
+            "label": "Confirm button",
+            "name": "age_gate_confirm_label",
+            "aria-label": "",
+            "type": "text",
+            "default_value": "Yes, I am 18+",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_telson_age_gate_enabled",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_telson_age_gate_deny_label",
+            "label": "Deny button",
+            "name": "age_gate_deny_label",
+            "aria-label": "",
+            "type": "text",
+            "default_value": "No, I am under 18",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_telson_age_gate_enabled",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_telson_age_gate_exit_url",
+            "label": "Redirect when under age",
+            "name": "age_gate_exit_url",
+            "aria-label": "",
+            "type": "url",
+            "default_value": "https://www.google.com/",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_telson_age_gate_enabled",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_telson_tab_contact",
+            "label": "Contact",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_telson_phone",
+            "label": "Phone",
+            "name": "phone",
+            "aria-label": "",
+            "type": "text"
+        },
+        {
+            "key": "field_telson_email",
+            "label": "Email",
+            "name": "email",
+            "aria-label": "",
+            "type": "email"
+        },
+        {
+            "key": "field_telson_address",
+            "label": "Address",
+            "name": "address",
+            "aria-label": "",
+            "type": "textarea",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_telson_tab_social",
+            "label": "Social",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_telson_social_links",
+            "label": "Social links",
+            "name": "social_links",
+            "aria-label": "",
+            "type": "repeater",
+            "sub_fields": [
+                {
+                    "key": "field_telson_social_network",
+                    "label": "Network",
+                    "name": "network",
+                    "aria-label": "",
+                    "type": "select",
+                    "choices": {
+                        "instagram": "Instagram",
+                        "facebook": "Facebook",
+                        "youtube": "Youtube",
+                        "x": "X (Twitter)",
+                        "tiktok": "Tiktok",
+                        "linkedin": "Linkedin"
+                    },
+                    "default_value": "instagram",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_telson_social_url",
+                    "label": "URL",
+                    "name": "url",
+                    "aria-label": "",
+                    "type": "url"
+                }
+            ],
+            "layout": "table",
+            "button_label": "Add social link",
+            "min": 0,
+            "max": 0,
+            "collapsed": ""
+        },
+        {
+            "key": "field_telson_tab_footer",
+            "label": "Footer",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_telson_footer_description",
+            "label": "Footer description",
+            "name": "footer_description",
+            "aria-label": "",
+            "type": "textarea",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_telson_footer_copyright",
+            "label": "Copyright line",
+            "name": "footer_copyright",
+            "aria-label": "",
+            "type": "text",
+            "default_value": "\u00a9 {year} Telson Optics.",
+            "instructions": "Use {year} for the current year."
+        },
+        {
+            "key": "field_telson_footer_credit",
+            "label": "Credit line",
+            "name": "footer_credit",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Basic HTML links allowed, e.g. Web design by ..."
+        },
+        {
+            "key": "field_telson_footer_menus_note",
+            "label": "Footer menus",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "message": "Footer link columns and the legal bar are managed in Appearance \u2192 Menus (locations: Footer: Products, Learn, Info, legal bar). Each menu's name becomes the column title.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_telson_tab_newsletter",
+            "label": "Newsletter",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_telson_newsletter_heading",
+            "label": "Heading",
+            "name": "newsletter_heading",
+            "aria-label": "",
+            "type": "text",
+            "default_value": "Join the Bold"
+        },
+        {
+            "key": "field_telson_newsletter_description",
+            "label": "Description",
+            "name": "newsletter_description",
+            "aria-label": "",
+            "type": "textarea",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_telson_newsletter_shortcode",
+            "label": "Form shortcode",
+            "name": "newsletter_shortcode",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Paste a Gravity Forms / Mailchimp shortcode. Leave empty to use the built-in form, which emails the address below."
+        },
+        {
+            "key": "field_telson_newsletter_recipient",
+            "label": "Signup notification email",
+            "name": "newsletter_recipient",
+            "aria-label": "",
+            "type": "email"
+        },
+        {
+            "key": "field_telson_newsletter_levels",
+            "label": "Experience levels",
+            "name": "newsletter_experience_levels",
+            "aria-label": "",
+            "type": "repeater",
+            "sub_fields": [
+                {
+                    "key": "field_telson_newsletter_level",
+                    "label": "Label",
+                    "name": "label",
+                    "aria-label": "",
+                    "type": "text"
+                }
+            ],
+            "layout": "table",
+            "button_label": "Add level",
+            "min": 0,
+            "max": 0,
+            "collapsed": ""
+        },
+        {
+            "key": "field_telson_tab_currency",
+            "label": "Currency",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_telson_currency_switcher_enabled",
+            "label": "Show currency switcher",
+            "name": "currency_switcher_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 0,
+            "instructions": "Display-only: catalogue and cart prices show an approximate converted amount. Checkout always charges in the store's real currency (WooCommerce \u2192 Settings \u2192 General), and says so."
+        },
+        {
+            "key": "field_telson_currencies",
+            "label": "Additional currencies",
+            "name": "currencies",
+            "aria-label": "",
+            "type": "repeater",
+            "sub_fields": [
+                {
+                    "key": "field_telson_currency_code",
+                    "label": "Currency code",
+                    "name": "code",
+                    "aria-label": "",
+                    "type": "text",
+                    "placeholder": "CAD",
+                    "maxlength": 3,
+                    "instructions": "Three-letter ISO code."
+                },
+                {
+                    "key": "field_telson_currency_label",
+                    "label": "Label",
+                    "name": "label",
+                    "aria-label": "",
+                    "type": "text",
+                    "placeholder": "CAD $"
+                },
+                {
+                    "key": "field_telson_currency_rate",
+                    "label": "Rate (per 1 store currency)",
+                    "name": "rate",
+                    "aria-label": "",
+                    "type": "number",
+                    "step": "0.0001",
+                    "placeholder": "1.38"
+                }
+            ],
+            "layout": "table",
+            "button_label": "Add currency",
+            "min": 0,
+            "max": 6,
+            "collapsed": "",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_telson_currency_switcher_enabled",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_telson_tab_shop",
+            "label": "Shop",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_telson_filter_attributes",
+            "label": "Attributes shown in shop filter",
+            "name": "filter_attributes",
+            "aria-label": "",
+            "type": "select",
+            "choices": [],
+            "multiple": 1,
+            "ui": 1,
+            "allow_null": 1,
+            "return_format": "value",
+            "instructions": "Leave empty to show every product attribute. Attribute list comes from Products \u2192 Attributes."
+        },
+        {
+            "key": "field_telson_shop_promises",
+            "label": "Promise strip",
+            "name": "shop_promises",
+            "aria-label": "",
+            "type": "repeater",
+            "sub_fields": [
+                {
+                    "key": "field_telson_promise_eyebrow",
+                    "label": "Eyebrow",
+                    "name": "eyebrow",
+                    "aria-label": "",
+                    "type": "text"
+                },
+                {
+                    "key": "field_telson_promise_title",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text"
+                },
+                {
+                    "key": "field_telson_promise_text",
+                    "label": "Text",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "text"
+                }
+            ],
+            "layout": "block",
+            "button_label": "Add promise",
+            "min": 0,
+            "max": 0,
+            "collapsed": ""
+        },
+        {
+            "key": "field_telson_tab_product",
+            "label": "Product page",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_telson_support_heading",
+            "label": "Support box heading",
+            "name": "support_heading",
+            "aria-label": "",
+            "type": "text",
+            "default_value": "Do you have a question?"
+        },
+        {
+            "key": "field_telson_support_text",
+            "label": "Support box text",
+            "name": "support_text",
+            "aria-label": "",
+            "type": "textarea",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_telson_support_link",
+            "label": "Support box button",
+            "name": "support_link",
+            "aria-label": "",
+            "type": "link",
+            "return_format": "array"
+        },
+        {
+            "key": "field_telson_tab_pro_staff",
+            "label": "Pro Staff",
+            "name": "",
+            "type": "tab"
+        },
+        {
+            "key": "field_telson_pro_staff_hero_image",
+            "label": "Archive hero background",
+            "name": "pro_staff_hero_image",
+            "aria-label": "",
+            "type": "image",
+            "return_format": "array",
+            "library": "all",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_telson_pro_staff_divider_image",
+            "label": "Divider image (below hero)",
+            "name": "pro_staff_divider_image",
+            "aria-label": "",
+            "type": "image",
+            "return_format": "array",
+            "library": "all",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_telson_tab_dealer_map",
+            "label": "Dealer Map",
+            "name": "",
+            "type": "tab"
+        },
+        {
+            "key": "field_telson_google_maps_api_key",
+            "label": "Google Maps API key",
+            "name": "google_maps_api_key",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Used by the Find a Dealer page for the interactive map (Maps JavaScript API + Geocoding API must both be enabled on this key)."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "telson-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Global content: branding, header, age gate, contact, social, footer, newsletter, shop and product page.",
+    "show_in_rest": 0,
+    "modified": 1790000000
+}

@@ -1,0 +1,83 @@
+{
+    "key": "group_telson_product",
+    "title": "Product details",
+    "fields": [
+        {
+            "key": "field_telson_badge_text",
+            "label": "Badge text",
+            "name": "badge_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Shown on the product card, e.g. New or Coming soon."
+        },
+        {
+            "key": "field_telson_key_features",
+            "label": "Key features",
+            "name": "key_features",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0,
+            "instructions": "Use a bulleted list."
+        },
+        {
+            "key": "field_telson_specifications",
+            "label": "Specifications",
+            "name": "specifications",
+            "aria-label": "",
+            "type": "repeater",
+            "sub_fields": [
+                {
+                    "key": "field_telson_spec_label",
+                    "label": "Label",
+                    "name": "label",
+                    "aria-label": "",
+                    "type": "text"
+                },
+                {
+                    "key": "field_telson_spec_value",
+                    "label": "Value",
+                    "name": "value",
+                    "aria-label": "",
+                    "type": "text"
+                }
+            ],
+            "layout": "table",
+            "button_label": "Add specification",
+            "min": 0,
+            "max": 0,
+            "collapsed": ""
+        },
+        {
+            "key": "field_telson_spec_pdf",
+            "label": "Specification PDF",
+            "name": "spec_pdf",
+            "aria-label": "",
+            "type": "file",
+            "return_format": "array",
+            "library": "all",
+            "mime_types": "pdf"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Extra content shown on the product page and card.",
+    "show_in_rest": 0,
+    "modified": 1790000000
+}

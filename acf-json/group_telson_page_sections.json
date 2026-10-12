@@ -1,0 +1,1536 @@
+{
+    "key": "group_telson_page_sections",
+    "title": "Page sections",
+    "fields": [
+        {
+            "key": "field_telson_sections",
+            "label": "Page sections",
+            "name": "sections",
+            "aria-label": "",
+            "type": "flexible_content",
+            "layouts": {
+                "layout_telson_hero": {
+                    "key": "layout_telson_hero",
+                    "name": "hero",
+                    "label": "Hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_hero_kicker",
+                            "label": "Kicker (small line above heading)",
+                            "name": "kicker",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_hero_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_hero_description",
+                            "label": "Description",
+                            "name": "description",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_telson_hero_cta",
+                            "label": "Button",
+                            "name": "cta",
+                            "aria-label": "",
+                            "type": "link",
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_telson_hero_cta2",
+                            "label": "Secondary button",
+                            "name": "cta_secondary",
+                            "aria-label": "",
+                            "type": "link",
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_telson_hero_bg",
+                            "label": "Background image",
+                            "name": "background_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "return_format": "array",
+                            "library": "all",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_telson_hero_bg_mobile",
+                            "label": "Mobile background image",
+                            "name": "background_mobile",
+                            "aria-label": "",
+                            "type": "image",
+                            "return_format": "array",
+                            "library": "all",
+                            "preview_size": "medium",
+                            "instructions": "Optional portrait crop used below 768px."
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_category_tiles": {
+                    "key": "layout_telson_category_tiles",
+                    "name": "category_tiles",
+                    "label": "Category tiles",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_tiles_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_tiles_style",
+                            "label": "Style",
+                            "name": "style",
+                            "aria-label": "",
+                            "type": "select",
+                            "choices": {
+                                "overlay": "Overlay (image with text on top)",
+                                "plain": "Plain (image above, caption below, carousel)"
+                            },
+                            "default_value": "overlay",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0
+                        },
+                        {
+                            "key": "field_telson_tiles_items",
+                            "label": "Tiles",
+                            "name": "tiles",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "sub_fields": [
+                                {
+                                    "key": "field_telson_tile_link",
+                                    "label": "Link (title is the tile label)",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "return_format": "array"
+                                },
+                                {
+                                    "key": "field_telson_tile_image",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "preview_size": "medium"
+                                }
+                            ],
+                            "layout": "block",
+                            "button_label": "Add tile",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_featured_products": {
+                    "key": "layout_telson_featured_products",
+                    "name": "featured_products",
+                    "label": "Featured products",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_fp_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_fp_description",
+                            "label": "Description",
+                            "name": "description",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_telson_fp_source",
+                            "label": "Products from",
+                            "name": "source",
+                            "aria-label": "",
+                            "type": "select",
+                            "choices": {
+                                "manual": "Hand-picked",
+                                "category": "A category",
+                                "latest": "Latest products",
+                                "on_sale": "On sale"
+                            },
+                            "default_value": "manual",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_telson_fp_products",
+                            "label": "Products",
+                            "name": "products",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "post_type": [
+                                "product"
+                            ],
+                            "filters": [
+                                "search"
+                            ],
+                            "return_format": "object",
+                            "min": 0,
+                            "max": 24,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_telson_fp_source",
+                                        "operator": "==",
+                                        "value": "manual"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "field_telson_fp_category",
+                            "label": "Category",
+                            "name": "category",
+                            "aria-label": "",
+                            "type": "taxonomy",
+                            "taxonomy": "product_cat",
+                            "field_type": "select",
+                            "return_format": "object",
+                            "add_term": 0,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "allow_null": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_telson_fp_source",
+                                        "operator": "==",
+                                        "value": "category"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "field_telson_fp_count",
+                            "label": "Number of products",
+                            "name": "count",
+                            "aria-label": "",
+                            "type": "number",
+                            "default_value": 8,
+                            "min": 1,
+                            "max": 24,
+                            "step": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_telson_fp_source",
+                                        "operator": "!=",
+                                        "value": "manual"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "field_telson_fp_layout",
+                            "label": "Layout",
+                            "name": "layout",
+                            "aria-label": "",
+                            "type": "select",
+                            "choices": {
+                                "carousel": "Carousel",
+                                "grid": "Grid"
+                            },
+                            "default_value": "carousel",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_telson_fp_view_all",
+                            "label": "View-all button",
+                            "name": "view_all",
+                            "aria-label": "",
+                            "type": "link",
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_series_showcase": {
+                    "key": "layout_telson_series_showcase",
+                    "name": "series_showcase",
+                    "label": "Series showcase",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_ss_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "eyebrow",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_ss_series",
+                            "label": "Series",
+                            "name": "series",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "sub_fields": [
+                                {
+                                    "key": "field_telson_ss_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "field_telson_ss_description",
+                                    "label": "Description",
+                                    "name": "description",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "rows": 3,
+                                    "new_lines": ""
+                                },
+                                {
+                                    "key": "field_telson_ss_image",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "preview_size": "medium"
+                                },
+                                {
+                                    "key": "field_telson_ss_links",
+                                    "label": "Links",
+                                    "name": "links",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_telson_ss_link",
+                                            "label": "Link",
+                                            "name": "link",
+                                            "aria-label": "",
+                                            "type": "link",
+                                            "return_format": "array"
+                                        }
+                                    ],
+                                    "layout": "table",
+                                    "button_label": "Add link",
+                                    "min": 0,
+                                    "max": 0,
+                                    "collapsed": ""
+                                }
+                            ],
+                            "layout": "block",
+                            "button_label": "Add series",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_image_text": {
+                    "key": "layout_telson_image_text",
+                    "name": "image_text",
+                    "label": "Image and text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_it_theme",
+                            "label": "Background",
+                            "name": "theme",
+                            "aria-label": "",
+                            "type": "select",
+                            "choices": {
+                                "light": "Light (page grey)",
+                                "dark": "Dark (#222)"
+                            },
+                            "default_value": "light",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_telson_it_image",
+                            "label": "Image",
+                            "name": "image",
+                            "aria-label": "",
+                            "type": "image",
+                            "return_format": "array",
+                            "library": "all",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_telson_it_position",
+                            "label": "Image position",
+                            "name": "image_position",
+                            "aria-label": "",
+                            "type": "select",
+                            "choices": {
+                                "left": "Left",
+                                "right": "Right"
+                            },
+                            "default_value": "left",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_telson_it_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "eyebrow",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_it_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_it_text",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_telson_it_stats",
+                            "label": "Stats (optional)",
+                            "name": "stats",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "sub_fields": [
+                                {
+                                    "key": "field_telson_it_stat_value",
+                                    "label": "Value",
+                                    "name": "value",
+                                    "aria-label": "",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "field_telson_it_stat_label",
+                                    "label": "Label",
+                                    "name": "label",
+                                    "aria-label": "",
+                                    "type": "text"
+                                }
+                            ],
+                            "layout": "table",
+                            "button_label": "Add stat",
+                            "min": 0,
+                            "max": 4,
+                            "collapsed": ""
+                        },
+                        {
+                            "key": "field_telson_it_cta",
+                            "label": "Button",
+                            "name": "cta",
+                            "aria-label": "",
+                            "type": "link",
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_telson_it_bg",
+                            "label": "Background image (optional)",
+                            "name": "background_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "return_format": "array",
+                            "library": "all",
+                            "preview_size": "medium"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_banner": {
+                    "key": "layout_telson_banner",
+                    "name": "banner",
+                    "label": "Promotional banner",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_bn_bg",
+                            "label": "Background image",
+                            "name": "background_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "return_format": "array",
+                            "library": "all",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_telson_bn_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "eyebrow",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_bn_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_bn_text",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_telson_bn_cta",
+                            "label": "Button",
+                            "name": "cta",
+                            "aria-label": "",
+                            "type": "link",
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_telson_bn_cta2",
+                            "label": "Secondary button",
+                            "name": "cta_secondary",
+                            "aria-label": "",
+                            "type": "link",
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_telson_bn_align",
+                            "label": "Text alignment",
+                            "name": "align",
+                            "aria-label": "",
+                            "type": "select",
+                            "choices": {
+                                "left": "Left",
+                                "center": "Centre",
+                                "right": "Right"
+                            },
+                            "default_value": "left",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_cta_links": {
+                    "key": "layout_telson_cta_links",
+                    "name": "cta_links",
+                    "label": "Link buttons row",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_cl_theme",
+                            "label": "Background",
+                            "name": "theme",
+                            "aria-label": "",
+                            "type": "select",
+                            "choices": {
+                                "light": "Light (page grey)",
+                                "dark": "Dark (#222)"
+                            },
+                            "default_value": "dark",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_telson_cl_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_cl_text",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_telson_cl_links",
+                            "label": "Links",
+                            "name": "links",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "sub_fields": [
+                                {
+                                    "key": "field_telson_cl_link",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "return_format": "array"
+                                }
+                            ],
+                            "layout": "table",
+                            "button_label": "Add link",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_testimonials": {
+                    "key": "layout_telson_testimonials",
+                    "name": "testimonials",
+                    "label": "Testimonials",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_ts_theme",
+                            "label": "Background",
+                            "name": "theme",
+                            "aria-label": "",
+                            "type": "select",
+                            "choices": {
+                                "light": "Light (page grey)",
+                                "dark": "Dark (#222)"
+                            },
+                            "default_value": "dark",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_telson_ts_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_ts_items",
+                            "label": "Testimonials",
+                            "name": "items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "sub_fields": [
+                                {
+                                    "key": "field_telson_ts_title",
+                                    "label": "Headline",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "field_telson_ts_quote",
+                                    "label": "Quote",
+                                    "name": "quote",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "rows": 3,
+                                    "new_lines": ""
+                                },
+                                {
+                                    "key": "field_telson_ts_author",
+                                    "label": "Author",
+                                    "name": "author",
+                                    "aria-label": "",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "field_telson_ts_rating",
+                                    "label": "Rating",
+                                    "name": "rating",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "default_value": 5,
+                                    "min": 0,
+                                    "max": 5,
+                                    "step": 1
+                                }
+                            ],
+                            "layout": "block",
+                            "button_label": "Add testimonial",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_social_feed": {
+                    "key": "layout_telson_social_feed",
+                    "name": "social_feed",
+                    "label": "Social feed",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_sf_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_sf_shortcode",
+                            "label": "Feed shortcode",
+                            "name": "shortcode",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "e.g. [instagram-feed]"
+                        },
+                        {
+                            "key": "field_telson_sf_link",
+                            "label": "Follow button",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "link",
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_newsletter": {
+                    "key": "layout_telson_newsletter",
+                    "name": "newsletter",
+                    "label": "Newsletter signup",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_nl_heading",
+                            "label": "Heading (overrides global)",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_nl_description",
+                            "label": "Description (overrides global)",
+                            "name": "description",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "rows": 3,
+                            "new_lines": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_content_section": {
+                    "key": "layout_telson_content_section",
+                    "name": "content_section",
+                    "label": "Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_cs_theme",
+                            "label": "Background",
+                            "name": "theme",
+                            "aria-label": "",
+                            "type": "select",
+                            "choices": {
+                                "light": "Light (page grey)",
+                                "dark": "Dark (#222)"
+                            },
+                            "default_value": "light",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_telson_cs_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_cs_content",
+                            "label": "Content",
+                            "name": "content",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_telson_cs_width",
+                            "label": "Width",
+                            "name": "width",
+                            "aria-label": "",
+                            "type": "select",
+                            "choices": {
+                                "narrow": "Narrow",
+                                "wide": "Wide"
+                            },
+                            "default_value": "narrow",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_gallery": {
+                    "key": "layout_telson_gallery",
+                    "name": "gallery",
+                    "label": "Image gallery",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_gl_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_gl_images",
+                            "label": "Images",
+                            "name": "images",
+                            "aria-label": "",
+                            "type": "gallery",
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "insert": "append",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_telson_gl_columns",
+                            "label": "Columns",
+                            "name": "columns",
+                            "aria-label": "",
+                            "type": "number",
+                            "default_value": 3,
+                            "min": 2,
+                            "max": 5,
+                            "step": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_logo_grid": {
+                    "key": "layout_telson_logo_grid",
+                    "name": "logo_grid",
+                    "label": "Logo grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_lg_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_lg_logos",
+                            "label": "Logos",
+                            "name": "logos",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "sub_fields": [
+                                {
+                                    "key": "field_telson_lg_logo",
+                                    "label": "Logo",
+                                    "name": "logo",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "preview_size": "medium"
+                                },
+                                {
+                                    "key": "field_telson_lg_link",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "return_format": "array"
+                                }
+                            ],
+                            "layout": "table",
+                            "button_label": "Add logo",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_stats": {
+                    "key": "layout_telson_stats",
+                    "name": "stats",
+                    "label": "Statistics",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_st_theme",
+                            "label": "Background",
+                            "name": "theme",
+                            "aria-label": "",
+                            "type": "select",
+                            "choices": {
+                                "light": "Light (page grey)",
+                                "dark": "Dark (#222)"
+                            },
+                            "default_value": "light",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_telson_st_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_st_items",
+                            "label": "Stats",
+                            "name": "items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "sub_fields": [
+                                {
+                                    "key": "field_telson_st_value",
+                                    "label": "Value",
+                                    "name": "value",
+                                    "aria-label": "",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "field_telson_st_label",
+                                    "label": "Label",
+                                    "name": "label",
+                                    "aria-label": "",
+                                    "type": "text"
+                                }
+                            ],
+                            "layout": "table",
+                            "button_label": "Add stat",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_model_showcase": {
+                    "key": "layout_telson_model_showcase",
+                    "name": "model_showcase",
+                    "label": "Model showcase",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_msc_tab_hero",
+                            "label": "Hero",
+                            "name": "",
+                            "type": "tab"
+                        },
+                        {
+                            "key": "field_telson_msc_product_id",
+                            "label": "WooCommerce product",
+                            "name": "product_id",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "post_type": [ "product" ],
+                            "return_format": "id",
+                            "ui": 1,
+                            "instructions": "Powers every \"Add to Cart\" button on this showcase."
+                        },
+                        {
+                            "key": "field_telson_msc_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "default_value": "TELSON"
+                        },
+                        {
+                            "key": "field_telson_msc_name",
+                            "label": "Model name",
+                            "name": "model_name",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "e.g. TMV 5-32X56"
+                        },
+                        {
+                            "key": "field_telson_msc_tagline",
+                            "label": "Tagline",
+                            "name": "tagline",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "e.g. Dominate Every Shot"
+                        },
+                        {
+                            "key": "field_telson_msc_hero_image",
+                            "label": "Hero image",
+                            "name": "hero_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "return_format": "array",
+                            "library": "all",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_telson_msc_tab_turrets",
+                            "label": "Precision & gallery",
+                            "name": "",
+                            "type": "tab"
+                        },
+                        {
+                            "key": "field_telson_msc_turrets_heading",
+                            "label": "Heading",
+                            "name": "turrets_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "default_value": "Precision & Adjustability"
+                        },
+                        {
+                            "key": "field_telson_msc_turrets_text",
+                            "label": "Text",
+                            "name": "turrets_text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_telson_msc_gallery",
+                            "label": "Detail photos",
+                            "name": "gallery",
+                            "aria-label": "",
+                            "type": "gallery",
+                            "return_format": "array",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_telson_msc_tab_badges",
+                            "label": "Turret badges",
+                            "name": "",
+                            "type": "tab"
+                        },
+                        {
+                            "key": "field_telson_msc_badges_heading",
+                            "label": "Heading",
+                            "name": "badges_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "default_value": "Turrets"
+                        },
+                        {
+                            "key": "field_telson_msc_badges_subheading",
+                            "label": "Subheading",
+                            "name": "badges_subheading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_msc_badges",
+                            "label": "Badges",
+                            "name": "badges",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "sub_fields": [
+                                {
+                                    "key": "field_telson_msc_badge_text",
+                                    "label": "Label",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "text"
+                                }
+                            ],
+                            "layout": "table",
+                            "button_label": "Add badge",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": ""
+                        },
+                        {
+                            "key": "field_telson_msc_tab_banner",
+                            "label": "Banner",
+                            "name": "",
+                            "type": "tab"
+                        },
+                        {
+                            "key": "field_telson_msc_banner_image",
+                            "label": "Banner image",
+                            "name": "banner_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "return_format": "array",
+                            "library": "all",
+                            "preview_size": "large"
+                        },
+                        {
+                            "key": "field_telson_msc_banner_text",
+                            "label": "Banner text",
+                            "name": "banner_text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_telson_msc_tab_features",
+                            "label": "Key features",
+                            "name": "",
+                            "type": "tab"
+                        },
+                        {
+                            "key": "field_telson_msc_features_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "features_eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "default_value": "Value For Your Buck"
+                        },
+                        {
+                            "key": "field_telson_msc_features_heading",
+                            "label": "Heading",
+                            "name": "features_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "default_value": "Key Features"
+                        },
+                        {
+                            "key": "field_telson_msc_features",
+                            "label": "Key features",
+                            "name": "features",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "sub_fields": [
+                                {
+                                    "key": "field_telson_msc_feature_text",
+                                    "label": "Feature",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "text"
+                                }
+                            ],
+                            "layout": "table",
+                            "button_label": "Add feature",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": ""
+                        },
+                        {
+                            "key": "field_telson_msc_tab_reticle",
+                            "label": "Reticle",
+                            "name": "",
+                            "type": "tab"
+                        },
+                        {
+                            "key": "field_telson_msc_reticle_heading",
+                            "label": "Heading",
+                            "name": "reticle_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "default_value": "Reticle"
+                        },
+                        {
+                            "key": "field_telson_msc_reticle_text",
+                            "label": "Text",
+                            "name": "reticle_text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_telson_msc_reticle_image",
+                            "label": "Reticle image (base)",
+                            "name": "reticle_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "return_format": "array",
+                            "library": "all",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_telson_msc_reticle_overlay",
+                            "label": "Reticle image (overlay)",
+                            "name": "reticle_overlay",
+                            "aria-label": "",
+                            "type": "image",
+                            "return_format": "array",
+                            "library": "all",
+                            "preview_size": "medium",
+                            "instructions": "Optional second image centered on top of the base image (e.g. the etched crosshair pattern)."
+                        },
+                        {
+                            "key": "field_telson_msc_reticle_download",
+                            "label": "Download link",
+                            "name": "reticle_download",
+                            "aria-label": "",
+                            "type": "link",
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_telson_msc_tab_optical",
+                            "label": "Optical quality",
+                            "name": "",
+                            "type": "tab"
+                        },
+                        {
+                            "key": "field_telson_msc_optical_heading",
+                            "label": "Heading",
+                            "name": "optical_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "default_value": "Optical Quality"
+                        },
+                        {
+                            "key": "field_telson_msc_optical_text",
+                            "label": "Text",
+                            "name": "optical_text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_telson_msc_optical_image",
+                            "label": "Image",
+                            "name": "optical_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "return_format": "array",
+                            "library": "all",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_telson_msc_tab_review",
+                            "label": "Video & review",
+                            "name": "",
+                            "type": "tab"
+                        },
+                        {
+                            "key": "field_telson_msc_video_url",
+                            "label": "Video URL",
+                            "name": "video_url",
+                            "aria-label": "",
+                            "type": "url"
+                        },
+                        {
+                            "key": "field_telson_msc_video_thumbnail",
+                            "label": "Video thumbnail",
+                            "name": "video_thumbnail",
+                            "aria-label": "",
+                            "type": "image",
+                            "return_format": "array",
+                            "library": "all",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_telson_msc_review_rating",
+                            "label": "Rating (out of 5)",
+                            "name": "review_rating",
+                            "aria-label": "",
+                            "type": "number",
+                            "default_value": 5,
+                            "min": 1,
+                            "max": 5,
+                            "step": "0.5"
+                        },
+                        {
+                            "key": "field_telson_msc_review_quote",
+                            "label": "Review quote",
+                            "name": "review_quote",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_telson_msc_review_author",
+                            "label": "Review author",
+                            "name": "review_author",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_msc_tab_warranty",
+                            "label": "Warranty",
+                            "name": "",
+                            "type": "tab"
+                        },
+                        {
+                            "key": "field_telson_msc_warranty_badge",
+                            "label": "Badge image",
+                            "name": "warranty_badge",
+                            "aria-label": "",
+                            "type": "image",
+                            "return_format": "array",
+                            "library": "all",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_telson_msc_warranty_heading",
+                            "label": "Heading",
+                            "name": "warranty_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "default_value": "Lifetime Warranty"
+                        },
+                        {
+                            "key": "field_telson_msc_warranty_text",
+                            "label": "Text",
+                            "name": "warranty_text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "rows": 3,
+                            "new_lines": "wpautop"
+                        },
+                        {
+                            "key": "field_telson_msc_warranty_image",
+                            "label": "Decorative image",
+                            "name": "warranty_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "return_format": "array",
+                            "library": "all",
+                            "preview_size": "medium"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_feature_collage": {
+                    "key": "layout_telson_feature_collage",
+                    "name": "feature_collage",
+                    "label": "Feature list with photo collage",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_fc_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_fc_text",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "rows": 3,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_telson_fc_bullets",
+                            "label": "Bullets",
+                            "name": "bullets",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "sub_fields": [
+                                {
+                                    "key": "field_telson_fc_bullet_text",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "text"
+                                }
+                            ],
+                            "layout": "table",
+                            "button_label": "Add bullet",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": ""
+                        },
+                        {
+                            "key": "field_telson_fc_images",
+                            "label": "Collage images",
+                            "name": "images",
+                            "aria-label": "",
+                            "type": "gallery",
+                            "return_format": "array",
+                            "library": "all",
+                            "min": 0,
+                            "max": 6,
+                            "preview_size": "medium"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_telson_region_list": {
+                    "key": "layout_telson_region_list",
+                    "name": "region_list",
+                    "label": "Region list (global presence)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_telson_rl_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "eyebrow",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_rl_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_telson_rl_text",
+                            "label": "Text",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "rows": 2,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_telson_rl_regions",
+                            "label": "Regions",
+                            "name": "regions",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "sub_fields": [
+                                {
+                                    "key": "field_telson_rl_region_name",
+                                    "label": "Name",
+                                    "name": "name",
+                                    "aria-label": "",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "field_telson_rl_region_text",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "field_telson_rl_region_link",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "return_format": "array"
+                                },
+                                {
+                                    "key": "field_telson_rl_region_image",
+                                    "label": "Background image",
+                                    "name": "background_image",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "preview_size": "medium"
+                                }
+                            ],
+                            "layout": "block",
+                            "button_label": "Add region",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add section",
+            "min": "",
+            "max": "",
+            "instructions": "Build the page from reusable sections. Drag to reorder."
+        },
+        {
+            "key": "field_telson_hide_page_title",
+            "label": "Hide page title band",
+            "name": "hide_page_title",
+            "aria-label": "",
+            "type": "true_false",
+            "ui": 1,
+            "default_value": 0,
+            "instructions": "Useful when the first section already carries the page heading."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Flexible content layouts for the homepage and marketing pages.",
+    "show_in_rest": 0,
+    "modified": 1790000000
+}

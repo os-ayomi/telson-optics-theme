@@ -1,0 +1,94 @@
+{
+    "key": "group_telson_pro_staff_fields",
+    "title": "Pro staff fields",
+    "fields": [
+        {
+            "key": "field_telson_ps_cover_image",
+            "label": "Cover image",
+            "name": "cover_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Shown in the Pro Staff grid and on the profile page.",
+            "return_format": "array",
+            "library": "all",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_telson_ps_heading",
+            "label": "Role / discipline",
+            "name": "heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. \"Tactical Adventure Racer / Pro Shooter\""
+        },
+        {
+            "key": "field_telson_ps_second_image",
+            "label": "Second photo",
+            "name": "second_featured_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Shown on the profile page only.",
+            "return_format": "array",
+            "library": "all",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_telson_ps_short_description",
+            "label": "Bio",
+            "name": "short_description",
+            "aria-label": "",
+            "type": "textarea",
+            "rows": 5,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_telson_ps_gallery",
+            "label": "Gallery",
+            "name": "gallery",
+            "aria-label": "",
+            "type": "gallery",
+            "return_format": "array",
+            "library": "all"
+        },
+        {
+            "key": "field_telson_ps_instagram_link",
+            "label": "Instagram link",
+            "name": "instagram_link",
+            "aria-label": "",
+            "type": "url"
+        },
+        {
+            "key": "field_telson_ps_web_link",
+            "label": "Website link",
+            "name": "web_link",
+            "aria-label": "",
+            "type": "url"
+        },
+        {
+            "key": "field_telson_ps_facebook_link",
+            "label": "Facebook link",
+            "name": "facebook_link",
+            "aria-label": "",
+            "type": "url"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "pro-staff"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Same meta keys JetEngine already uses on this post type \u2014 no data migration needed.",
+    "show_in_rest": 0,
+    "modified": 1790000000
+}

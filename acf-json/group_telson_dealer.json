@@ -1,0 +1,68 @@
+{
+    "key": "group_telson_dealer",
+    "title": "Dealer details",
+    "fields": [
+        {
+            "key": "field_telson_dealer_address",
+            "label": "Address",
+            "name": "address",
+            "aria-label": "",
+            "type": "textarea",
+            "rows": 2,
+            "new_lines": "br",
+            "required": 1,
+            "instructions": "Street, city, region and postal/zip code. Used to build the \"View on map\" link automatically."
+        },
+        {
+            "key": "field_telson_dealer_phone",
+            "label": "Phone",
+            "name": "phone",
+            "aria-label": "",
+            "type": "text"
+        },
+        {
+            "key": "field_telson_dealer_website",
+            "label": "Website",
+            "name": "website",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Optional — leave empty to link only to the map."
+        },
+        {
+            "key": "field_telson_dealer_lat",
+            "label": "Latitude",
+            "name": "lat",
+            "aria-label": "",
+            "type": "number",
+            "step": "0.000001",
+            "instructions": "Auto-filled by geocoding the address above. Leave blank to omit this dealer from the interactive map."
+        },
+        {
+            "key": "field_telson_dealer_lng",
+            "label": "Longitude",
+            "name": "lng",
+            "aria-label": "",
+            "type": "number",
+            "step": "0.000001"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "dealer"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Address, phone and website shown on the Dealer Directory page template.",
+    "show_in_rest": 1,
+    "modified": 1790000000
+}
